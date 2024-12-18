@@ -243,7 +243,7 @@ The researchers can see this comparison by clicking “All”, meaning that all 
 Phenograph and Spectral Clustering show moderate similarity (lighter shades), which suggests that Phenograph and Spectral Clustering tend to identify subpopulations or structures similarly, likely focusing on local density and relationships. DBSCAN appears to have the lowest similarity with KMeans and Agglomerative, as shown by dark purple/black cells. This is expected since DBSCAN identifies clusters based on density and can detect irregularly shaped clusters or noise. Therefore, as a result of this execution, we can distinguish three distinct groups. <br>
 
 <p align="center">
-    <img src="figures/figure_20.png" alt="Figure 20" width="300">
+    <img src="figures/figure_20.png" alt="Figure 20" width="600">
 </p>
 
 **Figure 20**: KMeans and Agglomerative seem to behave similarly and could be grouped together. Phenograph and Spectral Clustering also show moderate agreement, suggesting shared clustering characteristics. DBSCAN is an outlier as it differs the most from the others, reflecting its unique density-based approach. The program saves this figure in the clusters subdirectory which is the child of experiment directory.
@@ -261,7 +261,7 @@ Phenograph and Spectral Clustering show moderate similarity (lighter shades), wh
 The program finally allows us to look at the expression of the interesting genes on the data that has the reduced dimensionality after PCA. <br>
 
 <p align="center">
-    <img src="figures/figure_22.png" alt="Figure 22" width="300">
+    <img src="figures/figure_22.png" alt="Figure 22" width="600">
 </p>
 
 **Figure 22**: The PCA-reduced scatterplots suggest distinct clusters of cells, which likely represent biologically meaningful subpopulations. These clusters show differential gene expression patterns, as indicated by the color intensity for each gene.
@@ -276,7 +276,7 @@ It is likely that top-center cluster represents cells from lung tissue if genes 
 Ager, Nkx2-1, and Sftpc are supposed to be expressed in lung cells more. As we can see from figure 23, they are all expressed in lung cells distinctly. So, our hypothesis was true that the upper cluster indicates the lung cells.
 
 <p align="center">
-    <img src="figures/figure_23.png" alt="Figure 23" width="300">
+    <img src="figures/figure_23.png" alt="Figure 23" width="600">
 </p>
  
 **Figure 23**: Ager, Nkx2-1 and Sftpc genes expressions level.
