@@ -49,7 +49,7 @@ For the purpose of convenience and organization, the project is structured into 
 **Figure 1**: The directory structure of the project.
 
 <p align="center">
-    <img src="figures/figure_2.png" alt="Figure 2" width="300">
+    <img src="figures/figure_2.png" alt="Figure 2" width="700">
 </p>
  
 **Figure 2**: Distribution of different tissue types in the FACS dataset.
