@@ -243,7 +243,7 @@ The researchers can see this comparison by clicking “All”, meaning that all 
 Phenograph and Spectral Clustering show moderate similarity (lighter shades), which suggests that Phenograph and Spectral Clustering tend to identify subpopulations or structures similarly, likely focusing on local density and relationships. DBSCAN appears to have the lowest similarity with KMeans and Agglomerative, as shown by dark purple/black cells. This is expected since DBSCAN identifies clusters based on density and can detect irregularly shaped clusters or noise. Therefore, as a result of this execution, we can distinguish three distinct groups. <br>
 
 <p align="center">
-    <img src="figures/figure_20.png" alt="Figure 20" width="600">
+    <img src="figures/figure_20.png" alt="Figure 20" width="500">
 </p>
 
 **Figure 20**: KMeans and Agglomerative seem to behave similarly and could be grouped together. Phenograph and Spectral Clustering also show moderate agreement, suggesting shared clustering characteristics. DBSCAN is an outlier as it differs the most from the others, reflecting its unique density-based approach. The program saves this figure in the clusters subdirectory which is the child of experiment directory.
