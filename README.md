@@ -281,6 +281,36 @@ Ager, Nkx2-1, and Sftpc are supposed to be expressed in lung cells more. As we c
  
 **Figure 23**: Ager, Nkx2-1 and Sftpc genes expressions level.
 
+<p align="center">
+    <img src="figures/figure_24.png" alt="Figure 24" width="400">
+</p>
+ 
+**Figure 24**: Select your favorite gene to see its dispersion among different classes.
+
+<p align="center">
+    <img src="figures/figure_25.png" alt="Figure 25" width="400">
+</p>
+ 
+**Figure 25**: After selecting your first gene, you can see an interactive interface.
+
+<p align="center">
+    <img src="figures/figure_26.png" alt="Figure 26" width="500">
+</p>
+ 
+**Figure 26**: In this interface, you can change your favorite gene and see its dispersion accordingly. When you are ready you can continue to your analysis.
+
+<p align="center">
+    <img src="figures/figure_27.png" alt="Figure 27" width="400">
+</p>
+ 
+**Figure 27**: Next step is differential expression analysis. On the panel, you choose the class that you want to find its most differentially expressed genes.
+
+<p align="center">
+    <img src="figures/figure_28.png" alt="Figure 28" width="600">
+</p>
+ 
+**Figure 28**: After clicking 'see results', you can see the top five most differentially expressed genes in this class. You can change your class from the combo box.
+
 
 #### <a name="software-and-tools"></a>Software and Tools
 
