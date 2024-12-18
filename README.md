@@ -62,14 +62,29 @@ With the help of the platform, we can see our adjustments directly on the screen
 This approach ensures that the dataset retains cells with library sizes that fall within a representative and biologically meaningful range. The filtered dataset reduces noise and minimizes biases introduced by poor-quality or anomalous cells, enabling more accurate and reliable downstream analysis. By focusing on the bulk of the data (e.g., the middle 80% of cells), percentile-based filtering strikes a balance between preserving biological diversity and eliminating artifacts. <br>
 
 
-figure 3, 4, 5
+
+ 
+Figure 3: After the first percentile adjustment, click “see on graph” to see the interactive graph. Constraints: If a lower percentile becomes higher than the other, program automatically changes their values to avoid any error.
+
+ 
+Figure 4: Whenever we change the percentiles and click “See on graph” it will show us the percentile’s positions on the graph which is important to filter out cells that are both significantly smaller than average and significantly larger than average.
+
+ 
+Figure 5: when the user click filter button, it saves the last adjusted percentiles and continue to the next step while saving the last graph to the associated experiment directory.
+
 
 
 ##### <a name="gene-filtering"></a>Gene Filtering (Cutoff-Based)
 
 In single-cell RNA sequencing, not all genes are expressed in every cell, and some genes are expressed at such low levels that they are prone to dropout events where their expression is undetected due to technical noise. These lowly expressed genes, which may only be detected in a few cells, often lack sufficient data for meaningful analysis and can introduce noise into the dataset. The step-by-step description of the process with the screenshots taken from the real program can be seen below (see Figure 6, Figure 7, Figure 8). <br>
+ 
+Figure 6: When the cell filtering is done, the program opens a interface for the gene filtering. The interface include interactive graph which shows the amount of genes that are captured. 
+ 
+Figure 7: With the help of the user-friendly interface, user can easily find the best cutoff value. In order to see the cutoff on the graph, user should click “See on graph” after the adjustment.
+ 
+Figure 8: After deciding the best value (in this case it is 10), user can click “Filter” button to do the filteration with the adjusted cutoff value.
 
-figure 6, 7, 8
+
 
 After filteration step is done, all graphs, including the amount of genes before and after the cutoff, are saved in the associated experiment’s directory. <br>
 
@@ -93,7 +108,15 @@ PCA stands for principal component analysis, it is a dimensionality reduction te
 In this project, this step is initiated by the user entering the number of principal components that they want to generate (at least it should be 7, since we want to see the first 7 PCs). After receiving input from the user, the program calculates the principal components (PCs) and saves their corresponding graphs.
 For example, in this test case (see Figure 9), 8 principal components were generated. <br>
 
-figure 9, 10, 11
+Figure 9: User selected 8 as the number of principal components that will be generated after the dimensionality reduction.
+
+ 
+Figure 10: The interface which includes the graph with the coloring criteria, which can be helpful for researchers to look at different features’ effects interactively.
+
+ 
+Figure 11: When the user changes the criteria, they can observe how each principal component (PC) emphasizes different factors. For instance, the first two PCs primarily focus on tissues and sub-tissues, while PCs four and five are more associated with the mouse's sex rather than tissue type. This is evident from the subplots in Figure 10: the first subplot effectively separates the tissues but does not distinguish sex, whereas the fourth subplot demonstrates the opposite pattern, clearly separating by sex. 
+
+
 
 
 
@@ -102,27 +125,30 @@ figure 9, 10, 11
 For clustering, the researcher selects one of the algorithms from the clustering pool. Currently, there are five different algorithms that can be used: KMeans, Spectral, DBSCAN, Agglomerative and Phenograph. Each is analyzed in the results section in which different scenarios are tested, and their biological meaning is discussed. For an example, we will go through by selecting Brain Myleoid <br>
 PhenoGraph is a graph-based clustering algorithm designed to identify distinct populations in high-dimensional datasets (Levine et al., 2015). The best thing about PhenoGraph is that it does not require prior knowledge about the number of clusters, making it ideal for exploratory genomics studies. <br>
 
-figure 12
+Figure 12: Clear differentiation between clusters suggests it captures finer details in cell heterogeneity. It likely provides the most granular insight into distinct myeloid subpopulations.
 
 K-Means is a centroid-based clustering algorithm that partitions data into a predefined number of clusters (Gupta & Yerpude, 2018). That means that if KMeans is selected, researchers should give the possible number of clusters as an input. It divides cells into a predefined number of clusters by minimizing the distance between cells and cluster centroids. Since it assumes spherical clusters and equal variance, which may not hold in single-cell data. <br>
 
-figure 13, 14
+Figure 13: In KMeans clustering, the number of clusters should be given before the algorithm runs. It is also the same for Spectral, and Agglomerative clusterings.
+ 
+Figure 14: After KMeans with the number of clusters of three was selected, the clusters have been found. The program shows the graph and saves it in the corresponding cluster directory. KMeans works well for large, homogeneous cell populations but might oversimplify complex myeloid cell diversity. It can lead to less biological interpretability in highly heterogeneous datasets.
+
 
 Spectral identifies clusters by capturing the structure of data in non-Euclidean spaces, making it effective for non-convex clusters. <br>
 
-figure 15
+Figure 15: Spectral identifies myeloid subpopulations with strong separations in their profiles. However, it might not perform well for transitional states or noisy, irregular clusters.
 
 DBSCAN is a popular clustering algorithm that groups together point that are close to each other based on density. Unlike methods like K-Means, DBSCAN can find clusters of varying shapes, including non-convex clusters. <br>
 
-figure 16
+Figure 16: DBSCAN uses two main parameters: Epsilon (ε) and Minimum Samples. These parameters play crucial roles in determining how clusters are formed.
 
 Epsilon defines the radius of a neighborhood around a data point. It determines how close other points must be to consider them as part of the same cluster. And, the minimum number of samples determines, at least, how many samples should be aggregated to be considered as a cluster. <br>
 
-figure 17
+Figure 17: It can be seen that the algorithm struggles with elongated or irregularly shaped clusters due to its reliance on fixed density parameters (Epsilon and minimum points). Biologically, noise points could represent rare cell types, artifacts, or transitional states that don't fit well into the high-density clusters.
 
 Agglomerative Learning is a type of hierarchical clustering that builds a hierarchy of clusters through a bottom-up approach. <br>
 
-figure 18
+Figure 18: Number of clusters and linkage criteria should be given as parameters. Linkage determines how the distance between clusters is calculated. 
 
 **Common linkage methods are**:
 •	**Single Linkage**: The minimum distance between any two points in the clusters.
@@ -130,7 +156,7 @@ figure 18
 •	**Average Linkage**: The average distance between all pairs of points in the two clusters.
 •	**Ward’s Linkage**: Minimizes the variance of the clusters being merged.
 
-figure 19
+Figure 19: This approach could reveal hierarchical relationships among cell subpopulations, such as differentiation trajectories or lineage relationships.
 
 
 ##### <a name="ars"></a>Adjusted Rand Score (ARS)
@@ -141,15 +167,17 @@ It is a metric to evaluate the similarity between two clustering results.<br>
 The researchers can see this comparison by clicking “All”, meaning that all algorithms will be executed. At the end, the program shows the ARS scores by the heatmap (see. Figure 20). KMeans and Agglomerative Clustering have the highest similarity, indicated by a strong red color (high ARS). This makes sense as both approaches tend to create compact and uniform clusters and may group data similarly when the data structure is relatively straightforward. <br>
 Phenograph and Spectral Clustering show moderate similarity (lighter shades), which suggests that Phenograph and Spectral Clustering tend to identify subpopulations or structures similarly, likely focusing on local density and relationships. DBSCAN appears to have the lowest similarity with KMeans and Agglomerative, as shown by dark purple/black cells. This is expected since DBSCAN identifies clusters based on density and can detect irregularly shaped clusters or noise. Therefore, as a result of this execution, we can distinguish three distinct groups. <br>
 
-figure 20
+Figure 20: KMeans and Agglomerative seem to behave similarly and could be grouped together. Phenograph and Spectral Clustering also show moderate agreement, suggesting shared clustering characteristics. DBSCAN is an outlier as it differs the most from the others, reflecting its unique density-based approach. The program saves this figure in the clusters subdirectory which is the child of experiment directory.
 
 
 #### <a name="expression-of-genes"></a>Expression of Interesting Genes
-figure 21
+ 
+Figure 21: For this experiment, we selected large intestine and lung tissues to look gene expressions. 
+
 
 The program finally allows us to look at the expression of the interesting genes on the data that has the reduced dimensionality after PCA. <br>
 
-figure 22
+Figure 22: The PCA-reduced scatterplots suggest distinct clusters of cells, which likely represent biologically meaningful subpopulations. These clusters show differential gene expression patterns, as indicated by the color intensity for each gene.
 
 The PCA plots show two major clusters: One at the top center. Another at the bottom-left. We can assume that these clusters represent cells from the lung and large intestine. <br>
 
@@ -208,9 +236,11 @@ Results include:
 
 ## <a name="appendix"></a>Appendix
 
-- **Figure 1**: Directory structure of the project.
-- **Figure 2**: List of tissue types in the dataset.
-- **Figures 3-23**: Screenshots and plots demonstrating various steps of the analysis workflow.
+Figure 1: The directory structure of the project.
+
+ 
+Figure 2: Distribution of different tissue types in the FACS dataset.
+
 
 
 ---
