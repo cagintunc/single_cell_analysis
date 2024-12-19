@@ -46,7 +46,7 @@ For the purpose of convenience and organization, the project is structured into 
     <img src="figures/figure_1.png" alt="Figure 1" width="1000">
 </p>
  
-**Figure 1**: The directory structure of the project.
+**Figure 1**: The directory structure of the project. The user should set the database directory before executing the main.py code. 
 
 <p align="center">
     <img src="figures/figure_2.png" alt="Figure 2" width="500">
