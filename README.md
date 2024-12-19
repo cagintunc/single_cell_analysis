@@ -22,8 +22,8 @@
       2.  [Hardware Specifications](#hardware-specifications) <br>
   7. [Limitations and Feature Directions](#limitations) <br>
 3. [Usage in Bioengineering (Experiment and Results)](#usage-in-bioengineering) <br>
-  1. [Introduction](#introduction) <br>
-  2. [Results](#results) <br>
+   1. [Introduction](#introduction) <br>
+   2. [Results](#results) <br>
 4. [References](#references) <br>
 
 
