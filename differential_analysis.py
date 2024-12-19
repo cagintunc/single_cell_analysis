@@ -75,6 +75,7 @@ class Ui_MainWindow(object):
             ttest_results = scprep.stats.differential_expression(
                 data_in_cluster, data_out_cluster, measure='ttest'
             )
+            ttest_results = ttest_results[ttest_results["ttest"] > 0]
             ttest_results.to_csv(self.path + f"/differential_statistics/differential_expression_{curr_cluster}.csv")
             text = get_text(ttest_results)
             self.MainWindow.resize(769, 620)
