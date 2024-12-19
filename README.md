@@ -168,11 +168,19 @@ For example, in this test case (see Figure 9), 8 principal components were gener
 For clustering, the researcher selects one of the algorithms from the clustering pool. Currently, there are five different algorithms that can be used: KMeans, Spectral, DBSCAN, Agglomerative and Phenograph. Each is analyzed in the results section in which different scenarios are tested, and their biological meaning is discussed. For an example, we will go through by selecting Brain Myleoid <br>
 PhenoGraph is a graph-based clustering algorithm designed to identify distinct populations in high-dimensional datasets (Levine et al., 2015). The best thing about PhenoGraph is that it does not require prior knowledge about the number of clusters, making it ideal for exploratory genomics studies. <br>
 
+
+<p align="center">
+    <img src="figures/ffigure_12.png" alt="Figure 12" width="300">
+</p>
+
+**Figure 12**: In the clustering panel, users can select which clustering algorithm they want to use in their analysis. They can also click 'ALL' to compare all clustering algorithms. To analyze clustering, we also click 'ALL'.
+
+
 <p align="center">
     <img src="figures/figure_12.png" alt="Figure 12" width="300">
 </p>
 
-**Figure 12**: Clear differentiation between clusters suggests it captures finer details in cell heterogeneity. It likely provides the most granular insight into distinct myeloid subpopulations.
+**Figure 13**: Clear differentiation between clusters suggests it captures finer details in cell heterogeneity. It likely provides the most granular insight into distinct myeloid subpopulations.
 
 K-Means is a centroid-based clustering algorithm that partitions data into a predefined number of clusters (Gupta & Yerpude, 2018). That means that if KMeans is selected, researchers should give the possible number of clusters as an input. It divides cells into a predefined number of clusters by minimizing the distance between cells and cluster centroids. Since it assumes spherical clusters and equal variance, which may not hold in single-cell data. <br>
 
@@ -180,13 +188,13 @@ K-Means is a centroid-based clustering algorithm that partitions data into a pre
     <img src="figures/figure_13.png" alt="Figure 13" width="300">
 </p>
 
-**Figure 13**: In KMeans clustering, the number of clusters should be given before the algorithm runs. It is also the same for Spectral, and Agglomerative clustering.
+**Figure 14**: In KMeans clustering, the number of clusters should be given before the algorithm runs. It is also the same for Spectral, and Agglomerative clustering.
 
 <p align="center">
     <img src="figures/figure_14.png" alt="Figure 14" width="300">
 </p>
 
-**Figure 14**: After KMeans with the number of clusters of three was selected, the clusters have been found. The program shows the graph and saves it in the corresponding cluster directory. KMeans works well for large, homogeneous cell populations but might oversimplify complex myeloid cell diversity. It can lead to less biological interpretability in highly heterogeneous datasets.
+**Figure 15**: After KMeans with the number of clusters of three was selected, the clusters have been found. The program shows the graph and saves it in the corresponding cluster directory. KMeans works well for large, homogeneous cell populations but might oversimplify complex myeloid cell diversity. It can lead to less biological interpretability in highly heterogeneous datasets.
 
 
 Spectral identifies clusters by capturing the structure of data in non-Euclidean spaces, making it effective for non-convex clusters. <br>
@@ -195,7 +203,7 @@ Spectral identifies clusters by capturing the structure of data in non-Euclidean
     <img src="figures/figure_15.png" alt="Figure 15" width="300">
 </p>
 
-**Figure 15**: Spectral identifies myeloid subpopulations with strong separations in their profiles. However, it might not perform well for transitional states or noisy, irregular clusters.
+**Figure 16**: Spectral identifies myeloid subpopulations with strong separations in their profiles. However, it might not perform well for transitional states or noisy, irregular clusters.
 
 DBSCAN is a popular clustering algorithm that groups together point that are close to each other based on density. Unlike methods like K-Means, DBSCAN can find clusters of varying shapes, including non-convex clusters. <br>
 
@@ -203,7 +211,7 @@ DBSCAN is a popular clustering algorithm that groups together point that are clo
     <img src="figures/figure_16.png" alt="Figure 16" width="300">
 </p>
 
-**Figure 16**: DBSCAN uses two main parameters: Epsilon (ε) and Minimum Samples. These parameters play crucial roles in determining how clusters are formed.
+**Figure 17**: DBSCAN uses two main parameters: Epsilon (ε) and Minimum Samples. These parameters play crucial roles in determining how clusters are formed.
 
 Epsilon defines the radius of a neighborhood around a data point. It determines how close other points must be to consider them as part of the same cluster. And, the minimum number of samples determines, at least, how many samples should be aggregated to be considered as a cluster. <br>
 
@@ -211,7 +219,7 @@ Epsilon defines the radius of a neighborhood around a data point. It determines 
     <img src="figures/figure_17.png" alt="Figure 17" width="300">
 </p>
 
-**Figure 17**: It can be seen that the algorithm struggles with elongated or irregularly shaped clusters due to its reliance on fixed density parameters (Epsilon and minimum points). Biologically, noise points could represent rare cell types, artifacts, or transitional states that don't fit well into the high-density clusters.
+**Figure 18**: It can be seen that the algorithm struggles with elongated or irregularly shaped clusters due to its reliance on fixed density parameters (Epsilon and minimum points). Biologically, noise points could represent rare cell types, artifacts, or transitional states that don't fit well into the high-density clusters.
 
 Agglomerative Learning is a type of hierarchical clustering that builds a hierarchy of clusters through a bottom-up approach. <br>
 
@@ -219,7 +227,7 @@ Agglomerative Learning is a type of hierarchical clustering that builds a hierar
     <img src="figures/figure_18.png" alt="Figure 18" width="300">
 </p>
 
-**Figure 18**: Number of clusters and linkage criteria should be given as parameters. Linkage determines how the distance between clusters is calculated. 
+**Figure 19**: Number of clusters and linkage criteria should be given as parameters. Linkage determines how the distance between clusters is calculated. 
 
 **Common linkage methods are**:
 •	**Single Linkage**: The minimum distance between any two points in the clusters.
@@ -231,7 +239,7 @@ Agglomerative Learning is a type of hierarchical clustering that builds a hierar
     <img src="figures/figure_19.png" alt="Figure 19" width="300">
 </p>
 
-**Figure 19**: This approach could reveal hierarchical relationships among cell subpopulations, such as differentiation trajectories or lineage relationships.
+**Figure 20**: This approach could reveal hierarchical relationships among cell subpopulations, such as differentiation trajectories or lineage relationships.
 
 
 ##### <a name="ars"></a>Adjusted Rand Score (ARS)
@@ -246,7 +254,7 @@ Phenograph and Spectral Clustering show moderate similarity (lighter shades), wh
     <img src="figures/figure_20.png" alt="Figure 20" width="500">
 </p>
 
-**Figure 20**: KMeans and Agglomerative seem to behave similarly and could be grouped together. Phenograph and Spectral Clustering also show moderate agreement, suggesting shared clustering characteristics. DBSCAN is an outlier as it differs the most from the others, reflecting its unique density-based approach. The program saves this figure in the clusters subdirectory which is the child of experiment directory.
+**Figure 21**: KMeans and Agglomerative seem to behave similarly and could be grouped together. Phenograph and Spectral Clustering also show moderate agreement, suggesting shared clustering characteristics. DBSCAN is an outlier as it differs the most from the others, reflecting its unique density-based approach. The program saves this figure in the clusters subdirectory which is the child of experiment directory.
 
 
 #### <a name="expression-of-genes"></a>Expression of Interesting Genes
@@ -255,7 +263,7 @@ Phenograph and Spectral Clustering show moderate similarity (lighter shades), wh
     <img src="figures/figure_21.png" alt="Figure 21" width="300">
 </p>
 
-**Figure 21**: For this experiment, we selected large intestine and lung tissues to look gene expressions. 
+**Figure 22**: For this experiment, we selected large intestine and lung tissues to look gene expressions. 
 
 
 The program finally allows us to look at the expression of the interesting genes on the data that has the reduced dimensionality after PCA. <br>
@@ -264,7 +272,7 @@ The program finally allows us to look at the expression of the interesting genes
     <img src="figures/figure_22.png" alt="Figure 22" width="600">
 </p>
 
-**Figure 22**: The PCA-reduced scatterplots suggest distinct clusters of cells, which likely represent biologically meaningful subpopulations. These clusters show differential gene expression patterns, as indicated by the color intensity for each gene.
+**Figure 23**: The PCA-reduced scatterplots suggest distinct clusters of cells, which likely represent biologically meaningful subpopulations. These clusters show differential gene expression patterns, as indicated by the color intensity for each gene.
 
 The PCA plots show two major clusters: One at the top center. Another at the bottom-left. We can assume that these clusters represent cells from the lung and large intestine. <br>
 
@@ -279,37 +287,37 @@ Ager, Nkx2-1, and Sftpc are supposed to be expressed in lung cells more. As we c
     <img src="figures/figure_23.png" alt="Figure 23" width="600">
 </p>
  
-**Figure 23**: Ager, Nkx2-1 and Sftpc genes expressions level.
+**Figure 24**: Ager, Nkx2-1 and Sftpc genes expressions level.
 
 <p align="center">
     <img src="figures/figure_24.png" alt="Figure 24" width="400">
 </p>
  
-**Figure 24**: Select your favorite gene to see its dispersion among different classes.
+**Figure 25**: Select your favorite gene to see its dispersion among different classes.
 
 <p align="center">
     <img src="figures/figure_25.png" alt="Figure 25" width="400">
 </p>
  
-**Figure 25**: After selecting your first gene, you can see an interactive interface.
+**Figure 26**: After selecting your first gene, you can see an interactive interface.
 
 <p align="center">
     <img src="figures/figure_26.png" alt="Figure 26" width="500">
 </p>
  
-**Figure 26**: In this interface, you can change your favorite gene and see its dispersion accordingly. When you are ready you can continue to your analysis.
+**Figure 27**: In this interface, you can change your favorite gene and see its dispersion accordingly. When you are ready you can continue to your analysis.
 
 <p align="center">
     <img src="figures/figure_27.png" alt="Figure 27" width="400">
 </p>
  
-**Figure 27**: Next step is differential expression analysis. On the panel, you choose the class that you want to find its most differentially expressed genes.
+**Figure 28**: Next step is differential expression analysis. On the panel, you choose the class that you want to find its most differentially expressed genes.
 
 <p align="center">
     <img src="figures/figure_28.png" alt="Figure 28" width="600">
 </p>
  
-**Figure 28**: After clicking 'see results', you can see the top five most differentially expressed genes in this class. You can change your class from the combo box.
+**Figure 29**: After clicking 'see results', you can see the top five most differentially expressed genes in this class. You can change your class from the combo box.
 
 
 #### <a name="software-and-tools"></a>Software and Tools
