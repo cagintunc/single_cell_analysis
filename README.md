@@ -352,6 +352,8 @@ Results include:
 - Differential expression analyses.
 - PCA plots highlighting tissue-specific gene expression.
 
+Further details about the biological analysis can be found in the project's report.
+
 ---
 
 ## <a name="references"></a>References
