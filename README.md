@@ -148,13 +148,13 @@ For example, in this test case (see Figure 9), 8 principal components were gener
 **Figure 9**: User selected 8 as the number of principal components that will be generated after the dimensionality reduction.
 
 <p align="center">
-    <img src="figures/figure_10.png" alt="Figure 10" width="400">
+    <img src="figures/figure_10.png" alt="Figure 10" width="450">
 </p>
 
 **Figure 10**: The interface which includes the graph with the coloring criteria, which can be helpful for researchers to look at different features’ effects interactively.
 
 <p align="center">
-    <img src="figures/figure_11.png" alt="Figure 11" width="400">
+    <img src="figures/figure_11.png" alt="Figure 11" width="450">
 </p>
  
 **Figure 11**: When the user changes the criteria, they can observe how each principal component (PC) emphasizes different factors. For instance, the first two PCs primarily focus on tissues and sub-tissues, while PCs four and five are more associated with the mouse's sex rather than tissue type. This is evident from the subplots in Figure 10: the first subplot effectively separates the tissues but does not distinguish sex, whereas the fourth subplot demonstrates the opposite pattern, clearly separating by sex. 
@@ -170,14 +170,14 @@ PhenoGraph is a graph-based clustering algorithm designed to identify distinct p
 
 
 <p align="center">
-    <img src="figures/ffigure_12.png" alt="Figure 12" width="300">
+    <img src="figures/ffigure_12.png" alt="Figure 12" width="400">
 </p>
 
 **Figure 12**: In the clustering panel, users can select which clustering algorithm they want to use in their analysis. They can also click 'ALL' to compare all clustering algorithms. To analyze clustering, we also click 'ALL'.
 
 
 <p align="center">
-    <img src="figures/figure_12.png" alt="Figure 12" width="300">
+    <img src="figures/figure_12.png" alt="Figure 12" width="450">
 </p>
 
 **Figure 13**: Clear differentiation between clusters suggests it captures finer details in cell heterogeneity. It likely provides the most granular insight into distinct myeloid subpopulations.
@@ -191,7 +191,7 @@ K-Means is a centroid-based clustering algorithm that partitions data into a pre
 **Figure 14**: In KMeans clustering, the number of clusters should be given before the algorithm runs. It is also the same for Spectral, and Agglomerative clustering.
 
 <p align="center">
-    <img src="figures/figure_14.png" alt="Figure 14" width="300">
+    <img src="figures/figure_14.png" alt="Figure 14" width="450">
 </p>
 
 **Figure 15**: After KMeans with the number of clusters of three was selected, the clusters have been found. The program shows the graph and saves it in the corresponding cluster directory. KMeans works well for large, homogeneous cell populations but might oversimplify complex myeloid cell diversity. It can lead to less biological interpretability in highly heterogeneous datasets.
@@ -200,7 +200,7 @@ K-Means is a centroid-based clustering algorithm that partitions data into a pre
 Spectral identifies clusters by capturing the structure of data in non-Euclidean spaces, making it effective for non-convex clusters. <br>
 
 <p align="center">
-    <img src="figures/figure_15.png" alt="Figure 15" width="300">
+    <img src="figures/figure_15.png" alt="Figure 15" width="450">
 </p>
 
 **Figure 16**: Spectral identifies myeloid subpopulations with strong separations in their profiles. However, it might not perform well for transitional states or noisy, irregular clusters.
@@ -216,7 +216,7 @@ DBSCAN is a popular clustering algorithm that groups together point that are clo
 Epsilon defines the radius of a neighborhood around a data point. It determines how close other points must be to consider them as part of the same cluster. And, the minimum number of samples determines, at least, how many samples should be aggregated to be considered as a cluster. <br>
 
 <p align="center">
-    <img src="figures/figure_17.png" alt="Figure 17" width="300">
+    <img src="figures/figure_17.png" alt="Figure 17" width="450">
 </p>
 
 **Figure 18**: It can be seen that the algorithm struggles with elongated or irregularly shaped clusters due to its reliance on fixed density parameters (Epsilon and minimum points). Biologically, noise points could represent rare cell types, artifacts, or transitional states that don't fit well into the high-density clusters.
@@ -236,7 +236,7 @@ Agglomerative Learning is a type of hierarchical clustering that builds a hierar
 •	**Ward’s Linkage**: Minimizes the variance of the clusters being merged.
 
 <p align="center">
-    <img src="figures/figure_19.png" alt="Figure 19" width="300">
+    <img src="figures/figure_19.png" alt="Figure 19" width="450">
 </p>
 
 **Figure 20**: This approach could reveal hierarchical relationships among cell subpopulations, such as differentiation trajectories or lineage relationships.
