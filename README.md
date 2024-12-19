@@ -76,19 +76,19 @@ With the help of the platform, we can see our adjustments directly on the screen
 This approach ensures that the dataset retains cells with library sizes that fall within a representative and biologically meaningful range. The filtered dataset reduces noise and minimizes biases introduced by poor-quality or anomalous cells, enabling more accurate and reliable downstream analysis. By focusing on the bulk of the data (e.g., the middle 80% of cells), percentile-based filtering strikes a balance between preserving biological diversity and eliminating artifacts. <br>
 
 <p align="center">
-    <img src="figures/figure_3.png" alt="Figure 3" width="300">
+    <img src="figures/figure_3.png" alt="Figure 3" width="400">
 </p>
  
 **Figure 3**: After the first percentile adjustment, click “see on graph” to see the interactive graph. Constraints: If a lower percentile becomes higher than the other, program automatically changes their values to avoid any error.
 
 <p align="center">
-    <img src="figures/figure_4.png" alt="Figure 4" width="300">
+    <img src="figures/figure_4.png" alt="Figure 4" width="400">
 </p>
 
 **Figure 4**: Whenever we change the percentiles and click “See on graph,” it will show us the percentile’s positions on the graph, which is important to filter out cells that are both significantly smaller than average and significantly larger than average.
 
 <p align="center">
-    <img src="figures/figure_5.png" alt="Figure 5" width="300">
+    <img src="figures/figure_5.png" alt="Figure 5" width="400">
 </p>
  
 **Figure 5**: when the user click filter button, it saves the last adjusted percentiles and continue to the next step while saving the last graph to the associated experiment directory.
@@ -100,19 +100,19 @@ This approach ensures that the dataset retains cells with library sizes that fal
 In single-cell RNA sequencing, not all genes are expressed in every cell, and some genes are expressed at such low levels that they are prone to dropout events where their expression is undetected due to technical noise. These lowly expressed genes, which may only be detected in a few cells, often lack sufficient data for meaningful analysis and can introduce noise into the dataset. The step-by-step description of the process with the screenshots taken from the real program can be seen below (see Figure 6, Figure 7, Figure 8). <br>
 
 <p align="center">
-    <img src="figures/figure_6.png" alt="Figure 6" width="300">
+    <img src="figures/figure_6.png" alt="Figure 6" width="400">
 </p>
 
 **Figure 6**: When the cell filtering is done, the program opens a interface for the gene filtering. The interface include interactive graph which shows the amount of genes that are captured. 
 
 <p align="center">
-    <img src="figures/figure_7.png" alt="Figure 7" width="300">
+    <img src="figures/figure_7.png" alt="Figure 7" width="400">
 </p>
  
 **Figure 7**: With the help of the user-friendly interface, user can easily find the best cutoff value. In order to see the cutoff on the graph, user should click “See on graph” after the adjustment.
 
 <p align="center">
-    <img src="figures/figure_8.png" alt="Figure 8" width="300">
+    <img src="figures/figure_8.png" alt="Figure 8" width="400">
 </p>
  
 **Figure 8**: After deciding the best value (in this case it is 10), user can click “Filter” button to do the filteration with the adjusted cutoff value.
@@ -142,19 +142,19 @@ In this project, this step is initiated by the user entering the number of princ
 For example, in this test case (see Figure 9), 8 principal components were generated. <br>
 
 <p align="center">
-    <img src="figures/figure_9.png" alt="Figure 9" width="300">
+    <img src="figures/figure_9.png" alt="Figure 9" width="400">
 </p>
  
 **Figure 9**: User selected 8 as the number of principal components that will be generated after the dimensionality reduction.
 
 <p align="center">
-    <img src="figures/figure_10.png" alt="Figure 10" width="300">
+    <img src="figures/figure_10.png" alt="Figure 10" width="400">
 </p>
 
 **Figure 10**: The interface which includes the graph with the coloring criteria, which can be helpful for researchers to look at different features’ effects interactively.
 
 <p align="center">
-    <img src="figures/figure_11.png" alt="Figure 11" width="300">
+    <img src="figures/figure_11.png" alt="Figure 11" width="400">
 </p>
  
 **Figure 11**: When the user changes the criteria, they can observe how each principal component (PC) emphasizes different factors. For instance, the first two PCs primarily focus on tissues and sub-tissues, while PCs four and five are more associated with the mouse's sex rather than tissue type. This is evident from the subplots in Figure 10: the first subplot effectively separates the tissues but does not distinguish sex, whereas the fourth subplot demonstrates the opposite pattern, clearly separating by sex. 
