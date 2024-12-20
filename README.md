@@ -328,6 +328,12 @@ Ager, Nkx2-1, and Sftpc are supposed to be expressed in lung cells more. As we c
  
 **Figure 30**: After clicking 'see results', you can see the top five most differentially expressed genes in this class. You can change your class from the combo box.
 
+<p align="center">
+    <img src="figures/figure_31.png" alt="Figure 31" width="450">
+</p>
+
+**Figure 31**: When the experiment is done (when the application is executed), you can see your experiment's results under the "results" directory.
+
 
 #### <a name="software-and-tools"></a>Software and Tools
 
