@@ -4,7 +4,6 @@ import sys
 import scprep
 import matplotlib.pyplot as plt
 from PyQt5.QtGui import QPixmap
-from CustomizedMainWindow import CustomMainWindow
 
 class Ui_MainWindow(object):
     
