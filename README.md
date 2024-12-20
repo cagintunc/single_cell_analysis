@@ -48,7 +48,7 @@ For the purpose of convenience and organization, the project is structured into 
     <img src="figures/figure_30.png" alt="Figure-2" width="300">
 </p>
  
-**Figure 1**: The main menu in which the users can select the tissues to analyze. It is an interactive interface that allows you to add tissues by clicking 'Add Tissue' button.
+**Figure 1**: The application's main menu where users can select the tissues to analyze. It is an interactive interface that allows you to add tissues by clicking 'Add Tissue' button.
 
 
 <p align="center">
